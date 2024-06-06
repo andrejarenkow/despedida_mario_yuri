@@ -22,9 +22,9 @@ with container1:
         st.image(r"yuri.jpg", width=200)
         st.write('</div>', unsafe_allow_html=True)
     with col2:
-        st.markdown(f'<h1 style="text-align: center;color:#000000;font-size:32px;margin-top:0px;margin-bottom:0px;">{"Mensagens de Carinho"}</h1>', unsafe_allow_html=True)    
-        st.markdown(f'<h1 style="text-align: center;color:#000000;font-size:18px;margin-top:0px;margin-bottom:0px;">{"Colegas e ex colegas de trabalho do CEVS e da SES-RS"}</h1>', unsafe_allow_html=True)
-        st.markdown(f'<h1 style="text-align: center;color:#000000;font-size:13px;margin-top:0px;margin-bottom:0px;">{f"muito obrigado!"}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:45px;margin-top:0px;margin-bottom:0px;">{"Mensagens de Carinho"}</h1>', unsafe_allow_html=True)    
+        st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:30px;margin-top:0px;margin-bottom:0px;">{"Colegas e ex colegas de trabalho do CEVS e da SES-RS"}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:20px;margin-top:0px;margin-bottom:0px;">{f"muito obrigado!"}</h1>', unsafe_allow_html=True)
         
     with col3:    
         st.write('<div style="display: flex; justify-content: right;">', unsafe_allow_html=True)
