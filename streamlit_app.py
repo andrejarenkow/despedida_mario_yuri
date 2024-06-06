@@ -32,7 +32,7 @@ mensagens_yuri = " ".join(dados_filtrados['Mensagem para o YURI'].dropna())
 mensagens = mensagens_mario + " " + mensagens_yuri
 
 # Gerar a nuvem de palavras
-wordcloud = WordCloud(width=800, height=400, background_color='white').generate(mensagens)
+wordcloud = WordCloud(width=400, height=200, background_color='black').generate(mensagens)
 
 # Mostrar a nuvem de palavras no Streamlit
 st.subheader('Nuvem de Palavras')
