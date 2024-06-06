@@ -40,7 +40,7 @@ wordcloud = WordCloud(width=400, height=200, background_color='black', stopwords
 
 # Mostrar a nuvem de palavras no Streamlit
 st.subheader('Nuvem de Palavras')
-fig, ax = plt.subplots(figsize=(10, 5))
+fig, ax = plt.subplots(figsize=(5, 2.5))
 ax.imshow(wordcloud, interpolation='bilinear')
 ax.axis('off')
 st.pyplot(fig)
