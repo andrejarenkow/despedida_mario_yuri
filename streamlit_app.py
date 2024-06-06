@@ -97,7 +97,7 @@ if remetente:
     col_mario, col_yuri = st.columns(2)
 
     with col_mario:
-        st.subheader('Mensagem para o MÁRIO')
+        st.subheader('Mensagem para o MÁRIO ')
         st.write(mensagem_mario)
 
     with col_yuri:
