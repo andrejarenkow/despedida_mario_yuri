@@ -21,8 +21,7 @@ dados = pd.read_excel('https://docs.google.com/spreadsheets/d/e/2PACX-1vQo2ORfqA
 # Exibir número de mensagens
 st.metric('Número de mensagens', len(dados))
 
-# Caixa de seleção para filtrar mensagens por remetente
-remetente = st.selectbox('Quem mandou a mensagem?', options=sorted(dados['Seu nome'].unique()))
+
 
 # Filtrar dados pelo remetente selecionado
 dados_filtrados = dados#[dados['Seu nome'] == remetente]
@@ -88,6 +87,9 @@ fig.savefig(buf_mario, format="png", transparent=True)
 
 col_yuri.image(buf_yuri)
 col_mario.image(buf_mario)
+
+# Caixa de seleção para filtrar mensagens por remetente
+remetente = st.selectbox('Quem mandou a mensagem?', options=sorted(dados['Seu nome'].unique()))
 
 # Mostrar o texto das mensagens de Mário e Yuri lado a lado
 if remetente:
