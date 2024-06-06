@@ -74,7 +74,7 @@ ax.imshow(wordcloud_yuri, interpolation='bilinear')
 ax.axis('off')
 
 buf_yuri = BytesIO()
-fig.savefig(buf_yuri, format="png")
+fig.savefig(buf_yuri, format="png", transparent=True)
 
 # Mostrar a nuvem de palavras no Streamlit
 col_mario.subheader('Nuvem de Palavras Mário')
@@ -83,7 +83,7 @@ ax.imshow(wordcloud_mario, interpolation='bilinear')
 ax.axis('off')
 
 buf_mario = BytesIO()
-fig.savefig(buf_mario, format="png")
+fig.savefig(buf_mario, format="png", transparent=True)
 
 
 col_yuri.image(buf_yuri)
