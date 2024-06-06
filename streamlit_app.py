@@ -61,14 +61,28 @@ stopwords_personalizadas = {
 stopwords_portugues.update(stopwords_personalizadas)
 
 # Gerar a nuvem de palavras
-wordcloud = WordCloud(stopwords=stopwords_portugues, width=400, height=200, background_color='black', ).generate(mensagens)
+wordcloud_yuri = WordCloud(stopwords=stopwords_portugues, width=400, height=200, background_color='black', ).generate(mensagens_yuri)
+
+wordcloud_mario = WordCloud(stopwords=stopwords_portugues, width=400, height=200, background_color='black', ).generate(mensagens_mario)
 
 # Mostrar a nuvem de palavras no Streamlit
 st.subheader('Nuvem de Palavras')
 fig, ax = plt.subplots(figsize=(5, 2.5))
-ax.imshow(wordcloud, interpolation='bilinear')
+ax.imshow(wordcloud_yuri, interpolation='bilinear')
 ax.axis('off')
 
-buf = BytesIO()
-fig.savefig(buf, format="png")
-st.image(buf)
+buf_yuri = BytesIO()
+fig.savefig(buf_yuri, format="png")
+
+# Mostrar a nuvem de palavras no Streamlit
+st.subheader('Nuvem de Palavras')
+fig, ax = plt.subplots(figsize=(5, 2.5))
+ax.imshow(wordcloud_mario, interpolation='bilinear')
+ax.axis('off')
+
+buf_mario = BytesIO()
+fig.savefig(buf_mario, format="png")
+
+col_yuri, col_mario = st.columns(2)
+col_yuri.image(buf_yuri)
+col_mario.image(buf_mario)
