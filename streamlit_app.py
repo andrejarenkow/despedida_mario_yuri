@@ -88,3 +88,18 @@ fig.savefig(buf_mario, format="png", transparent=True)
 
 col_yuri.image(buf_yuri)
 col_mario.image(buf_mario)
+
+# Mostrar o texto das mensagens de Mário e Yuri lado a lado
+if remetente:
+    mensagem_mario = dados_filtrados[dados_filtrados['Seu nome'] == remetente]['Mensagem para o MÁRIO'].values[0]
+    mensagem_yuri = dados_filtrados[dados_filtrados['Seu nome'] == remetente]['Mensagem para o YURI'].values[0]
+
+    col_mario, col_yuri = st.columns(2)
+
+    with col_mario:
+        st.subheader('Mensagem para o MÁRIO')
+        st.write(mensagem_mario)
+
+    with col_yuri:
+        st.subheader('Mensagem para o YURI')
+        st.write(mensagem_yuri)
