@@ -24,7 +24,7 @@ st.metric('Número de mensagens', len(dados))
 remetente = st.selectbox('Quem mandou a mensagem?', options=sorted(dados['Seu nome'].unique()))
 
 # Filtrar dados pelo remetente selecionado
-dados_filtrados = dados[dados['Seu nome'] == remetente]
+dados_filtrados = dados#[dados['Seu nome'] == remetente]
 
 # Combinar textos das colunas 'Mensagem para o MÁRIO' e 'Mensagem para o YURI'
 mensagens_mario = " ".join(dados_filtrados['Mensagem para o MÁRIO'].dropna())
