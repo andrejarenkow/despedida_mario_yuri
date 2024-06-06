@@ -26,13 +26,17 @@ remetente = st.selectbox('Quem mandou a mensagem?', options=sorted(dados['Seu no
 # Filtrar dados pelo remetente selecionado
 dados_filtrados = dados#[dados['Seu nome'] == remetente]
 
+
 # Combinar textos das colunas 'Mensagem para o MÁRIO' e 'Mensagem para o YURI'
 mensagens_mario = " ".join(dados_filtrados['Mensagem para o MÁRIO '].dropna())
 mensagens_yuri = " ".join(dados_filtrados['Mensagem para o YURI'].dropna())
 mensagens = mensagens_mario + " " + mensagens_yuri
 
+# Lista de stopwords em português
+stopwords_portugues = set(STOPWORDS)
+
 # Gerar a nuvem de palavras
-wordcloud = WordCloud(width=400, height=200, background_color='black').generate(mensagens)
+wordcloud = WordCloud(width=400, height=200, background_color='black', stopwords=stopwords_portugues).generate(mensagens)
 
 # Mostrar a nuvem de palavras no Streamlit
 st.subheader('Nuvem de Palavras')
