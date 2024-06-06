@@ -16,7 +16,7 @@ st.title('Mensagens de Carinho - Mário e Yuri')
 
 # Carregar os dados
 dados = pd.read_excel('https://docs.google.com/spreadsheets/d/e/2PACX-1vQo2ORfqALtxZziexogUMaFnFlgWMm1llUVjWX6kB4i4uapOJ39lShGcO2M9R_ketNORU22Po6KkTwX/pub?output=xlsx')
-dados
+#dados
 
 # Exibir número de mensagens
 st.metric('Número de mensagens', len(dados))
