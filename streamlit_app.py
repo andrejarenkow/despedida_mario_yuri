@@ -56,7 +56,7 @@ stopwords_personalizadas = {
     'forem', 'serei', 'será', 'seremos', 'serão', 'seria', 'seríamos', 'seriam', 'tenho', 'tem', 
     'temos', 'têm', 'tinha', 'tínhamos', 'tinham', 'tive', 'teve', 'tivemos', 'tiveram', 'tivera', 
     'tivéramos', 'tenha', 'tenhamos', 'tenham', 'tivesse', 'tivéssemos', 'tivessem', 'tiver', 
-    'tivermos', 'tiverem', 'terei', 'terá', 'teremos', 'terão', 'teria', 'teríamos', 'teriam'
+    'tivermos', 'tiverem', 'terei', 'terá', 'teremos', 'terão', 'teria', 'teríamos', 'teriam',
 }
 stopwords_portugues.update(stopwords_personalizadas)
 
@@ -65,8 +65,10 @@ wordcloud_yuri = WordCloud(stopwords=stopwords_portugues, width=400, height=200,
 
 wordcloud_mario = WordCloud(stopwords=stopwords_portugues, width=400, height=200, background_color='black', ).generate(mensagens_mario)
 
+col_yuri, col_mario = st.columns(2)
+
 # Mostrar a nuvem de palavras no Streamlit
-st.subheader('Nuvem de Palavras')
+col_yuri.subheader('Nuvem de Palavras Yuri')
 fig, ax = plt.subplots(figsize=(5, 2.5))
 ax.imshow(wordcloud_yuri, interpolation='bilinear')
 ax.axis('off')
@@ -75,7 +77,7 @@ buf_yuri = BytesIO()
 fig.savefig(buf_yuri, format="png")
 
 # Mostrar a nuvem de palavras no Streamlit
-st.subheader('Nuvem de Palavras')
+col_mario.subheader('Nuvem de Palavras Mário')
 fig, ax = plt.subplots(figsize=(5, 2.5))
 ax.imshow(wordcloud_mario, interpolation='bilinear')
 ax.axis('off')
@@ -83,6 +85,6 @@ ax.axis('off')
 buf_mario = BytesIO()
 fig.savefig(buf_mario, format="png")
 
-col_yuri, col_mario = st.columns(2)
+
 col_yuri.image(buf_yuri)
 col_mario.image(buf_mario)
