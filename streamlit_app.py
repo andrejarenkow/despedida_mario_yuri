@@ -14,4 +14,5 @@ dados = pd.read_excel('https://docs.google.com/spreadsheets/d/e/2PACX-1vQo2ORfqA
 dados
 
 st.metric('Número de mensagens', len(dados))
+st.selectbox('Quem mandou a mensagem?', options=sorted(dados['Seu nome'].unique()))
 
