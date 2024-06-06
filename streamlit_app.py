@@ -98,12 +98,12 @@ if remetente:
     mensagem_mario = dados_filtrados[dados_filtrados['Seu nome'] == remetente]['Mensagem para o MÁRIO '].values[0]
     mensagem_yuri = dados_filtrados[dados_filtrados['Seu nome'] == remetente]['Mensagem para o YURI'].values[0]
 
-    mensagem_yuri, mensagem_mario = st.columns(2)
+    col_mensagem_yuri, col_mensagem_mario = st.columns(2)
     
-    with mensagem_mario:
+    with col_mensagem_mario:
         st.subheader(f'Mensagem de {remetente} para o MÁRIO')
         st.write(mensagem_mario)
 
-    with mensagem_yuri:
+    with col_mensagem_yuri:
         st.subheader(f'Mensagem de {remetente} para o YURI')
         st.write(mensagem_yuri)
