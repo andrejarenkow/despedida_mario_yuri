@@ -11,7 +11,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state='collapsed'
 )
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([1,5,1])
 col1.image('yuri.jpg', width=200)
 col2.title('Mensagens de Carinho - Mário e Yuri')
 col3.image('mario.png',width=200)
