@@ -23,7 +23,7 @@ with container1:
         st.write('<div style="margin-top: 15px;">', unsafe_allow_html=True)
         st.write('</div>', unsafe_allow_html=True)
         st.write('<div style="display: flex; justify-content: left;">', unsafe_allow_html=True)
-        st.image(r"yuri.jpg", width=200)
+        st.image(r"yuri.jfif", width=200)
         st.write('</div>', unsafe_allow_html=True)
     with col2:
         st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:45px;margin-top:0px;margin-bottom:0px;">{"Mensagens de Carinho"}</h1>', unsafe_allow_html=True)    
