@@ -22,7 +22,7 @@ with container1:
     with col1:
         st.write('<div style="margin-top: 15px;">', unsafe_allow_html=True)
         st.write('</div>', unsafe_allow_html=True)
-        st.write('<div style="display: flex; justify-content: left;">', unsafe_allow_html=True)
+        st.write('<div style="display: flex; justify-content: center;">', unsafe_allow_html=True)
         st.image(r"yuri.jfif", width=200)
         st.write('</div>', unsafe_allow_html=True)
     with col2:
@@ -31,7 +31,7 @@ with container1:
         st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:20px;margin-top:0px;margin-bottom:0px;">{f"Já são {len(dados)} mensagens!"}</h1>', unsafe_allow_html=True)
         
     with col3:    
-        st.write('<div style="display: flex; justify-content: right;">', unsafe_allow_html=True)
+        st.write('<div style="display: flex; justify-content: center;">', unsafe_allow_html=True)
         st.image(r'mario.png', width=250)
         st.write('</div>', unsafe_allow_html=True)
 
