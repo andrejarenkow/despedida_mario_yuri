@@ -11,9 +11,10 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state='collapsed'
 )
-st.image('yuri.jpg', width=200)
-st.title('Mensagens de Carinho - Mário e Yuri')
-st.image('mario.png',width=200)
+col1, col2, col3 = st.columns(3)
+col1.image('yuri.jpg', width=200)
+col2.title('Mensagens de Carinho - Mário e Yuri')
+col3.image('mario.png',width=200)
 # Carregar os dados
 dados = pd.read_excel('https://docs.google.com/spreadsheets/d/e/2PACX-1vQo2ORfqALtxZziexogUMaFnFlgWMm1llUVjWX6kB4i4uapOJ39lShGcO2M9R_ketNORU22Po6KkTwX/pub?output=xlsx')
 #dados
