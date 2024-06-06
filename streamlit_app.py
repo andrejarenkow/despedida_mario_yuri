@@ -11,10 +11,26 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state='collapsed'
 )
-col1, col2, col3 = st.columns([1,5,1])
-col1.image('yuri.jpg', width=200)
-col2.title('Mensagens de Carinho')
-col3.image('mario.png',width=200)
+
+container1 = st.container()
+with container1:
+    col1, col2, col3 = st.columns([2,9,2])
+    with col1:
+        st.write('<div style="margin-top: 15px;">', unsafe_allow_html=True)
+        st.write('</div>', unsafe_allow_html=True)
+        st.write('<div style="display: flex; justify-content: left;">', unsafe_allow_html=True)
+        st.image(r"yuri.jpg", width=200)
+        st.write('</div>', unsafe_allow_html=True)
+    with col2:
+        st.markdown(f'<h1 style="text-align: center;color:#000000;font-size:32px;margin-top:0px;margin-bottom:0px;">{"Mensagens de Carinho"}</h1>', unsafe_allow_html=True)    
+        st.markdown(f'<h1 style="text-align: center;color:#000000;font-size:18px;margin-top:0px;margin-bottom:0px;">{"Colegas e ex colegas de trabalho do CEVS e da SES-RS"}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="text-align: center;color:#000000;font-size:13px;margin-top:0px;margin-bottom:0px;">{f"muito obrigado!"}</h1>', unsafe_allow_html=True)
+        
+    with col3:    
+        st.write('<div style="display: flex; justify-content: right;">', unsafe_allow_html=True)
+        st.image(r'mario.png', width=250)
+        st.write('</div>', unsafe_allow_html=True)
+
 # Carregar os dados
 dados = pd.read_excel('https://docs.google.com/spreadsheets/d/e/2PACX-1vQo2ORfqALtxZziexogUMaFnFlgWMm1llUVjWX6kB4i4uapOJ39lShGcO2M9R_ketNORU22Po6KkTwX/pub?output=xlsx')
 #dados
