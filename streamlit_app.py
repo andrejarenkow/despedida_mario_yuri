@@ -64,6 +64,8 @@ wordcloud_yuri = WordCloud(stopwords=stopwords_portugues, width=400, height=200,
 
 wordcloud_mario = WordCloud(stopwords=stopwords_portugues, width=400, height=200, background_color='black', ).generate(mensagens_mario)
 
+
+
 col_yuri, col_mario = st.columns(2)
 
 # Mostrar a nuvem de palavras no Streamlit
@@ -87,19 +89,21 @@ fig.savefig(buf_mario, format="png", transparent=True)
 
 col_yuri.image(buf_yuri)
 col_mario.image(buf_mario)
-
 # Caixa de seleção para filtrar mensagens por remetente
 remetente = st.selectbox('Quem mandou a mensagem?', options=sorted(dados['Seu nome'].unique()))
+
 
 # Mostrar o texto das mensagens de Mário e Yuri lado a lado
 if remetente:
     mensagem_mario = dados_filtrados[dados_filtrados['Seu nome'] == remetente]['Mensagem para o MÁRIO '].values[0]
     mensagem_yuri = dados_filtrados[dados_filtrados['Seu nome'] == remetente]['Mensagem para o YURI'].values[0]
 
-    with col_mario:
+    mensagem_yuri, mensagem_mario = st.columns(2)
+    
+    with mensagem_mario:
         st.subheader(f'Mensagem de {remetente} para o MÁRIO')
         st.write(mensagem_mario)
 
-    with col_yuri:
+    with mensagem_yuri:
         st.subheader(f'Mensagem de {remetente} para o YURI')
         st.write(mensagem_yuri)
