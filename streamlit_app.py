@@ -36,7 +36,7 @@ dados = pd.read_excel('https://docs.google.com/spreadsheets/d/e/2PACX-1vQo2ORfqA
 #dados
 
 # Exibir número de mensagens
-st.metric('Número de mensagens', len(dados))
+col2.metric('Número de mensagens', len(dados))
 
 
 
