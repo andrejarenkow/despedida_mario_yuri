@@ -33,11 +33,15 @@ mensagens_mario = " ".join(dados_filtrados['Mensagem para o MÁRIO '].dropna())
 mensagens_yuri = " ".join(dados_filtrados['Mensagem para o YURI'].dropna())
 mensagens = mensagens_mario + " " + mensagens_yuri
 
-# Lista de stopwords em português
-stopwords_portugues = set(STOPWORDS)
+# Lista de palavras a serem removidas manualmente
+palavras_a_remover = ['que', 'o', 'a']  # Adicione suas palavras aqui
+
+# Remover palavras manualmente
+for palavra in palavras_a_remover:
+    mensagens = mensagens.replace(palavra, '')
 
 # Gerar a nuvem de palavras
-wordcloud = WordCloud(width=400, height=200, background_color='black', stopwords=stopwords_portugues).generate(mensagens)
+wordcloud = WordCloud(width=400, height=200, background_color='black', ).generate(mensagens)
 
 # Mostrar a nuvem de palavras no Streamlit
 st.subheader('Nuvem de Palavras')
