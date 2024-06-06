@@ -29,8 +29,8 @@ dados_filtrados = dados#[dados['Seu nome'] == remetente]
 
 
 # Combinar textos das colunas 'Mensagem para o MÁRIO' e 'Mensagem para o YURI'
-mensagens_mario = " ".join(dados_filtrados['Mensagem para o MÁRIO '].dropna())
-mensagens_yuri = " ".join(dados_filtrados['Mensagem para o YURI'].dropna())
+mensagens_mario = ". ".join(dados_filtrados['Mensagem para o MÁRIO '].dropna())
+mensagens_yuri = ". ".join(dados_filtrados['Mensagem para o YURI'].dropna())
 mensagens = mensagens_mario + " " + mensagens_yuri
 
 # Lista de palavras a serem removidas manualmente
