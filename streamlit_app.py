@@ -34,7 +34,7 @@ mensagens_yuri = " ".join(dados_filtrados['Mensagem para o YURI'].dropna())
 mensagens = mensagens_mario + " " + mensagens_yuri
 
 # Lista de palavras a serem removidas manualmente
-palavras_a_remover = ['que', 'o', 'a']  # Adicione suas palavras aqui
+palavras_a_remover = ['que', 'o', 'a','e','um']  # Adicione suas palavras aqui
 
 # Remover palavras manualmente
 for palavra in palavras_a_remover:
