@@ -12,6 +12,10 @@ st.set_page_config(
     initial_sidebar_state='collapsed'
 )
 
+# Carregar os dados
+dados = pd.read_excel('https://docs.google.com/spreadsheets/d/e/2PACX-1vQo2ORfqALtxZziexogUMaFnFlgWMm1llUVjWX6kB4i4uapOJ39lShGcO2M9R_ketNORU22Po6KkTwX/pub?output=xlsx')
+#dados
+
 container1 = st.container()
 with container1:
     col1, col2, col3 = st.columns([2,9,2])
@@ -24,20 +28,12 @@ with container1:
     with col2:
         st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:45px;margin-top:0px;margin-bottom:0px;">{"Mensagens de Carinho"}</h1>', unsafe_allow_html=True)    
         st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:30px;margin-top:0px;margin-bottom:0px;">{"Colegas e ex colegas de trabalho do CEVS e da SES-RS"}</h1>', unsafe_allow_html=True)
-        st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:20px;margin-top:0px;margin-bottom:0px;">{f"muito obrigado!"}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:20px;margin-top:0px;margin-bottom:0px;">{f"Já são {len(dados} mensagens!"}</h1>', unsafe_allow_html=True)
         
     with col3:    
         st.write('<div style="display: flex; justify-content: right;">', unsafe_allow_html=True)
         st.image(r'mario.png', width=250)
         st.write('</div>', unsafe_allow_html=True)
-
-# Carregar os dados
-dados = pd.read_excel('https://docs.google.com/spreadsheets/d/e/2PACX-1vQo2ORfqALtxZziexogUMaFnFlgWMm1llUVjWX6kB4i4uapOJ39lShGcO2M9R_ketNORU22Po6KkTwX/pub?output=xlsx')
-#dados
-
-# Exibir número de mensagens
-col2.metric('Número de mensagens', len(dados))
-
 
 
 # Filtrar dados pelo remetente selecionado
