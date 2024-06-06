@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
+from io import BytesIO
 
 # Configuração da página do Streamlit
 st.set_page_config(
@@ -43,6 +44,7 @@ st.subheader('Nuvem de Palavras')
 fig, ax = plt.subplots(figsize=(5, 2.5))
 ax.imshow(wordcloud, interpolation='bilinear')
 ax.axis('off')
-st.pyplot(fig)
 
-
+buf = BytesIO()
+fig.savefig(buf, format="png")
+st.image(buf)
