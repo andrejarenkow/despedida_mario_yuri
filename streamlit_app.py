@@ -8,5 +8,10 @@ st.set_page_config(
     initial_sidebar_state='collapsed')
 
 
+st.title('Mensagens de Carinho - Mário e Yuri')
+
 dados = pd.read_excel('https://docs.google.com/spreadsheets/d/e/2PACX-1vQo2ORfqALtxZziexogUMaFnFlgWMm1llUVjWX6kB4i4uapOJ39lShGcO2M9R_ketNORU22Po6KkTwX/pub?output=xlsx')
 dados
+
+st.metric('Número de mensagens', len(dados))
+
