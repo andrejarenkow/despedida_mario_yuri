@@ -101,9 +101,9 @@ if remetente:
     col_mensagem_yuri, col_mensagem_mario = st.columns(2)
     
     with col_mensagem_mario:
-        st.write(f'Mensagem de {remetente} para o MÁRIO')
+        st.write(f'Mensagem de {remetente} para o Mário')
         st.write(mensagem_mario)
 
     with col_mensagem_yuri:
-        st.write(f'Mensagem de {remetente} para o YURI')
+        st.write(f'Mensagem de {remetente} para o Yuri')
         st.write(mensagem_yuri)
