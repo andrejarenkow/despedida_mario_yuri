@@ -63,9 +63,6 @@ stopwords_portugues.update(stopwords_personalizadas)
 # Gerar a nuvem de palavras
 wordcloud = WordCloud(stopwords=stopwords_portugues, width=400, height=200, background_color='black', ).generate(mensagens)
 
-# Gerar a nuvem de palavras
-wordcloud = WordCloud(width=400, height=200, background_color='black', ).generate(mensagens)
-
 # Mostrar a nuvem de palavras no Streamlit
 st.subheader('Nuvem de Palavras')
 fig, ax = plt.subplots(figsize=(5, 2.5))
