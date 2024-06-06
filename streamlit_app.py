@@ -28,7 +28,7 @@ with container1:
     with col2:
         st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:45px;margin-top:0px;margin-bottom:0px;">{"Mensagens de Carinho"}</h1>', unsafe_allow_html=True)    
         st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:30px;margin-top:0px;margin-bottom:0px;">{"Colegas e ex colegas de trabalho do CEVS e da SES-RS"}</h1>', unsafe_allow_html=True)
-        st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:20px;margin-top:0px;margin-bottom:0px;">{f"Já são {len(dados} mensagens!"}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="text-align: center;color:#ffffff;font-size:20px;margin-top:0px;margin-bottom:0px;">{f"Já são {len(dados)} mensagens!"}</h1>', unsafe_allow_html=True)
         
     with col3:    
         st.write('<div style="display: flex; justify-content: right;">', unsafe_allow_html=True)
