@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from wordcloud import WordCloud
+from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 
 # Configuração da página do Streamlit
